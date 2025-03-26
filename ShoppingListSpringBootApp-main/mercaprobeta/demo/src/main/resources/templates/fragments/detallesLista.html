@@ -1,0 +1,41 @@
+<!-- Contenido principal -->
+<div class="mt-4" xmlns:th="http://www.w3.org/1999/xhtml">
+  <div class="row">
+    <div class="col-6 offset-3"><h1 class="text-center mb-4">Detalle de lista: </h1></div>
+  </div>
+  <!-- Buscador de productos y botón Añadir -->
+  <div class="d-flex align-items-center">
+    <!--<input type="text" class="form-control" id="searchProduct" placeholder="Buscar producto...">-->
+    <button class="btn btn-primary ml-2" id="addProductButton">Añadir Producto</button>
+    <input type="hidden" name="hdIdLista" id="hdIdLista" th:value="${idLista}">
+  </div>
+
+  <!-- Lista de productos -->
+  <div class="product-list mt-4">
+    <!-- Los productos añadidos aparecerán aquí -->
+    <ul>
+      <li th:each="ShoppingListProducts : ${productos}" class="listaItem row">
+        <div class="col-1">
+          <img th:src="${ShoppingListProducts.thumbnail}" style="max-width:40px">
+        </div>
+        <div class="col-9">
+          <h4 th:text="${ShoppingListProducts.name}" class="listaTextItem"></h4>
+          <span th:text="${ShoppingListProducts.packaging}" class="listaSubTextITem"></span>
+        </div>
+        <div class="col-1">
+          <h4><span th:text="${ShoppingListProducts.price}"></span>
+            <i class="bi bi-currency-euro"></i></h4>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Total -->
+  <div style="text-align: right">
+    <h2><strong>Total:</strong> <span class="total-section" th:text="${total}"></span> <i class="bi bi-currency-euro"></i></h2>
+
+  </div>
+  <!--<div class="total-section">
+    <h4>Total: $<span id="totalPrice">0.00</span></h4>
+  </div>-->
+</div>

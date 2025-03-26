@@ -1,0 +1,32 @@
+
+    <style>
+        @media (max-width: 500px)  {
+            .container
+            {
+                width:300px;
+                margin: 0 auto;
+            }
+        }
+        @media (min-width: 500px) {
+            .container
+            {
+                width:300px;
+                margin: 0 auto;
+            }
+        }
+
+    </style>
+<div class="container" >
+    <h2 class="text-center mt-5">User Login</h2>
+    <form th:action="@{/dologin}" method="post" class="mt-4">
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Introduce email" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="contrasena" placeholder="Introduce password" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100" id="btnEntrar">Entrar</button>
+    </form>
+</div>

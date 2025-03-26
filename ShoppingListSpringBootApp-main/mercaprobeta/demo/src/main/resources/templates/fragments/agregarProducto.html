@@ -1,0 +1,26 @@
+<style xmlns:th="http://www.w3.org/1999/xhtml">
+    .agregarproducto_container
+    {
+          max-width:300px;
+          margin: auto;
+          width: 50%;
+          padding: 10px;
+    }
+</style>
+<div class="agregarproducto_container">
+    <p>Agregar producto</p>
+    <select id="subcategorias" class="form-select" >
+        <option value="">Seleccione una subcategoría</option>
+    </select>
+    <br/>
+    <select id="productos"  class="form-select">
+        <option value="">Seleccione un producto</option>
+    </select>
+    <br/>
+    <button  class="btn btn-primary" id="btnAgregarProd">Agregar</button>
+    <input type="hidden" name="hdIdLista" id="hdIdLista" th:value="${idLista}">
+</div>
+
+<script>
+
+</script>

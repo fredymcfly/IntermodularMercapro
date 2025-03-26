@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MercaPro Beta - ShoppingList App</title>
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" th:href="@{/assets/favicon.ico}" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <style>
+    body {
+       margin: 0;
+       padding: 0;
+       font-family: Arial, sans-serif;
+       background: linear-gradient(135deg, #7ed321, #41b883);
+       /*color: white;*/
+   }
+   .navbar {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       background-color: rgba(255, 255, 255, 0.1);
+       padding: 10px 20px;
+       border-radius: 10px;
+       margin: 20px;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   }
+   .navbar a {
+       text-decoration: none;
+       color: white;
+       margin: 0 20px;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+   .navbar a:hover {
+       text-decoration: underline;
+   }
+   .navbar a .icon {
+   font-size: 20px;
+       width: 50px;
+       height: 50px;
+       border-radius: 50%;
+       background-color: white;
+       color: black;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       margin-bottom: 5px;
+   }
+   .container {
+       background-color: rgba(255, 255, 255, 0.8);
+       padding: 20px;
+       border-radius: 10px;
+       margin: 20px;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+       max-width:95%;
+   }
+   .container h2 {
+       margin-top: 0;
+   }
+   .container ul {
+       list-style-type: none;
+       padding: 0;
+   }
+   .container li {
+       margin: 10px 0;
+   }
+
+
+  </style>
+</head>
+<body>
+<div class="navbar">
+  <a href="#" id="home" >
+    <div class="icon">
+      <i class="bi bi-house"></i>
+    </div>
+    Home
+  </a>
+  <a href="#" id="mislistsas" >
+    <div class="icon">
+      <i class="bi bi-card-checklist"></i>
+    </div>
+    Listas
+  </a>
+  <a href="#" id="verlogin" >
+    <div class="icon">
+      <i class="bi bi-box-arrow-in-right"></i>
+    </div>
+    Entrar
+  </a>
+</div>
+<div class="container" id="contenido">
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script th:src="@{/js/scripts.js}" defer></script>
+<script th:src="@{/js/addproductscripts.js}" defer></script>
+<script th:src="@{/js/apiFetch.js}" defer></script>
+</body>
+
+</html>

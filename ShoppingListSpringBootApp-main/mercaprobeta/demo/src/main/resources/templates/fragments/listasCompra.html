@@ -1,0 +1,39 @@
+<style>
+    .listaItem
+    {
+        border-bottom:1px solid silver;
+        padding-bottom:5px;
+        text-align:left;
+    }
+    i{
+        width:16px;
+        height:16px;
+    }
+    .hamIcon{
+  font-size: 2em;
+}
+</style>
+<div>
+    <div class="row">
+        <div class="col-6 offset-3"><h1 class="text-center mb-4">Listas de Compra</h1></div>
+        <div class="col-3"><a href="#" id="nuevaLista" class="btn btn-primary align-text-bottom">Nueva Lista</a></div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <ul>
+                <li th:each="ShoppingList : ${listasCompra}" class="listaItem row">
+                    <div class="col-1">
+                        <i class="bi bi-basket2 hamIcon"></i>
+                    </div>
+                    <div class="col-10">
+                        <h3 th:text="${ShoppingList.nombre}" class="listaTextItem"></h3>
+                        <span th:text="${ShoppingList.date}" class="listaSubTextITem"></span>
+                    </div>
+                    <div class="col-1">
+                        <a th:href="@{/api/lists/detallesLista(id=${ShoppingList.id})}" ><i class="bi bi-eye hamIcon verLista"></i></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
